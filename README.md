@@ -15,11 +15,15 @@ Bu proje, BGY207 Web Tasarımı dersi kapsamında HTML5, CSS3 ve JavaScript kull
 
 Merhaba, ben **Tuanna Altın**. Kapadokya Üniversitesi Bilgisayar ve Bilişim Teknolojileri Fakültesi Yazılım Geliştirme bölümü 2. sınıf öğrencisiyim. Web tasarımı, Python ile programlama, nesne tabanlı programlama, veri yapıları ve siber güvenlik temelleri alanlarında kendimi geliştiriyorum. Akademik bilgimi sektörel deneyimle pekiştirmek için yazılım geliştirme ve ön yüz (frontend) alanlarında staj fırsatları arıyorum.
 
-- **GitHub:** [https://github.com/tuannaltinn](https://github.com/tuannaltinn)
+- **GitHub Profili:** [https://github.com/tuannaltinn](https://github.com/tuannaltinn)
 - **E-posta:** tuannaltin@icloud.com
 
-## Nasıl Açılır?
+## Canlı Önizleme ve Nasıl Açılır?
 
+- **Canlı Site (GitHub Pages):** [https://tuannaltinn.github.io/tanitim-sayfasi/](https://tuannaltinn.github.io/tanitim-sayfasi/)
+- **GitHub Deposu:** [https://github.com/tuannaltinn/tanitim-sayfasi](https://github.com/tuannaltinn/tanitim-sayfasi)
+
+### Yerel Bilgisayarda Açma
 1. `tanitim-sayfasi` klasörünü açın.
 2. Klasör içindeki `index.html` dosyasına çift tıklayarak güncel bir web tarayıcısında (Chrome, Edge, Firefox vb.) açın.
 3. Proje tamamen statik HTML, CSS ve JavaScript dosyalarından oluştuğu için herhangi bir sunucu veya veritabanı kurulumu gerekmez.
