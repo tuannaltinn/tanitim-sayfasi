@@ -1,0 +1,542 @@
+/* Tüm öğelerde kutu boyutlandırmasını ve temel boşlukları sıfırlar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sayfa içi bağlantılara tıklandığında yumuşak kaydırma sağlar */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sayfanın genel yazı tipini, rengini, arka planını ve satır yüksekliğini belirler */
+body {
+    font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #111111;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Sayfa içeriğini ortalar ve maksimum genişliğini sınırlar */
+.kapsayici {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Üst bilgi alanının arka planını, alt çizgisini ve sabit konumunu ayarlar */
+#ust-bilgi {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8e5;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Üst bilgideki marka, menü ve tema düğmesini Flexbox ile yan yana hizalar */
+.ust-duzen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ana sayfa başlığının (ad soyad) yazı boyutunu ve rengini belirler */
+h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0f3d2e;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
+/* Ad soyad altındaki ünvan metninin stilini ayarlar */
+.alt-unvan {
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+/* Gezinme menüsündeki bağlantıları Flexbox ile yan yana dizer */
+#ana-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Menü bağlantılarının rengini, yazı kalınlığını ve geçiş efektini belirler */
+#ana-menu a {
+    text-decoration: none;
+    color: #111111;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 6px 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Menü bağlantılarının üzerine gelindiğinde koyu yeşil vurgu ekler */
+#ana-menu a:hover,
+#ana-menu a:focus {
+    color: #0f3d2e;
+    border-bottom-color: #0f3d2e;
+}
+
+/* Tema değiştirme düğmesinin görünümünü ve kenarlığını biçimlendirir */
+.tema-butonu {
+    background-color: #0f3d2e;
+    color: #ffffff;
+    border: 1px solid #0f3d2e;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Tema düğmesinin üzerine gelindiğinde bebek mavisi arka plan ve siyah metin uygular */
+.tema-butonu:hover,
+.tema-butonu:focus {
+    background-color: #b8ddf8;
+    color: #111111;
+    border-color: #0f3d2e;
+}
+
+/* Ana bölümlerin üst-alt boşluğunu ve aralarındaki ayırıcı çizgiyi ayarlar */
+.bolum {
+    padding: 56px 0;
+    border-bottom: 1px solid #e6ece9;
+}
+
+/* Bölüm başlıklarının (h2) boyutunu, rengini ve alt boşluğunu belirler */
+h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #0f3d2e;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+/* Alt başlıkların (h3) boyutunu, rengini ve boşluklarını ayarlar */
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 14px;
+}
+
+/* Hakkımda bölümünde metin ve fotoğrafı Grid ile yan yana yerleştirir */
+.hakkimda-icerik {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Hakkımda paragraflarının alt boşluğunu belirler */
+.hakkimda-metin p {
+    margin-bottom: 16px;
+    color: #222222;
+}
+
+/* Dış bağlantıları içeren kapsayıcıyı Flexbox ile düzenler */
+.dis-baglantilar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* Birincil dış bağlantı düğmesinin koyu yeşil stilini belirler */
+.baglanti-buton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #0f3d2e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #0f3d2e;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Birincil bağlantı düğmesinin üzerine gelindiğinde renk değişimi sağlar */
+.baglanti-buton:hover,
+.baglanti-buton:focus {
+    background-color: #111111;
+    border-color: #111111;
+}
+
+/* İkincil dış bağlantı düğmesine bebek mavisi arka plan ve siyah metin verir */
+.baglanti-buton.ikincil {
+    background-color: #cce6fa;
+    color: #111111;
+    border: 1px solid #0f3d2e;
+}
+
+/* İkincil bağlantı düğmesinin üzerine gelindiğinde koyu yeşil ton uygular */
+.baglanti-buton.ikincil:hover,
+.baglanti-buton.ikincil:focus {
+    background-color: #0f3d2e;
+    color: #ffffff;
+}
+
+/* Profil fotoğrafı kapsayıcısını ortalar */
+.profil-cerceve {
+    display: flex;
+    justify-content: center;
+}
+
+/* Profil fotoğrafının yuvarlatılmış, temiz ve taşmayan görünümünü ayarlar */
+.profil-foto {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    box-shadow: 0 12px 28px rgba(15, 61, 46, 0.14);
+}
+
+/* Sırasız ve sıralı liste kartlarını Grid ile iki sütun halinde dizer */
+.liste-izgara {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+/* Beceri ve hedef listelerini barındıran kartların stilini belirler */
+.kart {
+    background-color: #f6faf8;
+    border: 1px solid #d7e5df;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+/* Sırasız ve sıralı listelerin iç boşluğunu ayarlar */
+.kart ul,
+.kart ol {
+    padding-left: 20px;
+}
+
+/* Liste öğelerinin arasındaki dikey boşluğu belirler */
+.kart li {
+    margin-bottom: 8px;
+    color: #1f1f1f;
+}
+
+/* Tablonun küçük ekranlarda taşmasını önlemek için kapsayıcıyı ayarlar */
+.tablo-kapsayici {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #d7e5df;
+}
+
+/* Dersler tablosunun genel genişliğini ve kenarlık birleşimini düzenler */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    text-align: left;
+}
+
+/* Tablo başlık satırının koyu yeşil arka planını ve beyaz yazısını ayarlar */
+thead th {
+    background-color: #0f3d2e;
+    color: #ffffff;
+    padding: 14px 16px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Tablo veri hücrelerinin iç boşluğunu ve alt çizgisini belirler */
+tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e6ece9;
+    color: #1a1a1a;
+}
+
+/* Tabloda çift numaralı satırlara hafif bebek mavisi tonu vererek okunaklılığı artırır */
+tbody tr:nth-child(even) {
+    background-color: #f0f7fd;
+}
+
+/* İletişim bölümü açıklama paragrafının alt boşluğunu ayarlar */
+.iletisim-aciklama {
+    margin-bottom: 24px;
+    color: #222222;
+}
+
+/* Metin içi e-posta bağlantısının rengini ve kalınlığını belirler */
+.metin-baglanti {
+    color: #0f3d2e;
+    font-weight: 600;
+}
+
+/* İletişim formunun maksimum genişliğini ve kart görünümünü ayarlar */
+#iletisim-formu {
+    max-width: 600px;
+    background-color: #f6faf8;
+    border: 1px solid #d7e5df;
+    border-radius: 12px;
+    padding: 28px;
+}
+
+/* Her form alanının (etiket + kutu) alt boşluğunu belirler */
+.form-grubu {
+    margin-bottom: 18px;
+}
+
+/* Form etiketlerinin blok görünümünü ve yazı stilini ayarlar */
+.form-grubu label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111111;
+}
+
+/* Metin, e-posta ve mesaj alanlarının genişliğini, kenarlığını ve yazı tipini belirler */
+.form-grubu input,
+.form-grubu textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #111111;
+    background-color: #ffffff;
+    border: 1px solid #9db3aa;
+    border-radius: 8px;
+}
+
+/* Form alanlarına odaklanıldığında belirgin koyu yeşil çerçeve gösterir */
+.form-grubu input:focus,
+.form-grubu textarea:focus {
+    outline: 2px solid #0f3d2e;
+    border-color: #0f3d2e;
+}
+
+/* Form gönder düğmesinin stilini ve tam genişlik yerleşimini ayarlar */
+.gonder-butonu {
+    background-color: #0f3d2e;
+    color: #ffffff;
+    border: 1px solid #0f3d2e;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Gönder düğmesinin üzerine gelindiğinde bebek mavisi vurgu uygular */
+.gonder-butonu:hover,
+.gonder-butonu:focus {
+    background-color: #cce6fa;
+    color: #111111;
+}
+
+/* Form doğrulama ve teşekkür mesajının yerleşimini ve yazı kalınlığını ayarlar */
+.form-durum {
+    margin-top: 14px;
+    font-weight: 600;
+    min-height: 24px;
+}
+
+/* Hata durumunda mesaj metnini yüksek kontrastlı koyu kırmızı yapar */
+.form-durum.hata {
+    color: #b00020;
+}
+
+/* Başarılı gönderim durumunda mesaj metnini koyu yeşil yapar */
+.form-durum.basari {
+    color: #0f3d2e;
+}
+
+/* Alt bilgi (footer) alanının arka planını ve iç boşluğunu ayarlar */
+#alt-bilgi {
+    background-color: #111111;
+    color: #ffffff;
+    padding: 28px 0;
+}
+
+/* Alt bilgi içeriğini Flexbox ile iki yana hizalar */
+.alt-duzen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Alt bilgi içindeki bağlantıyı bebek mavisi rengiyle okunaklı hale getirir */
+#alt-bilgi a {
+    color: #b8ddf8;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Alt bilgi bağlantısının üzerine gelindiğinde alt çizgi ekler */
+#alt-bilgi a:hover,
+#alt-bilgi a:focus {
+    text-decoration: underline;
+}
+
+/* Koyu tema aktif olduğunda sayfa genel arka planını ve metin rengini değiştirir */
+body.koyu-tema {
+    background-color: #0d1110;
+    color: #f4f7f5;
+}
+
+/* Koyu temada üst bilgi alanının arka planını ve alt çizgisini koyulaştırır */
+body.koyu-tema #ust-bilgi {
+    background-color: #0d1110;
+    border-bottom-color: #24332d;
+}
+
+/* Koyu temada başlıkları bebek mavisi rengiyle yüksek kontrastlı hale getirir */
+body.koyu-tema h1,
+body.koyu-tema h2 {
+    color: #b8ddf8;
+}
+
+/* Koyu temada alt başlıkları, ünvanı ve paragrafları açık tona çevirir */
+body.koyu-tema h3,
+body.koyu-tema .alt-unvan,
+body.koyu-tema .hakkimda-metin p,
+body.koyu-tema .iletisim-aciklama,
+body.koyu-tema .kart li,
+body.koyu-tema .form-grubu label {
+    color: #e8efec;
+}
+
+/* Koyu temada menü bağlantılarının rengini açar */
+body.koyu-tema #ana-menu a {
+    color: #f4f7f5;
+}
+
+/* Koyu temada menü bağlantılarının üzerine gelindiğinde bebek mavisi vurgu verir */
+body.koyu-tema #ana-menu a:hover,
+body.koyu-tema #ana-menu a:focus {
+    color: #b8ddf8;
+    border-bottom-color: #b8ddf8;
+}
+
+/* Koyu temada tema düğmesini bebek mavisi arka plan ve siyah metin yapar */
+body.koyu-tema .tema-butonu {
+    background-color: #b8ddf8;
+    color: #0d1110;
+    border-color: #b8ddf8;
+}
+
+/* Koyu temada bölüm ayırıcı çizgilerini koyu yeşil tona uyarlar */
+body.koyu-tema .bolum {
+    border-bottom-color: #1f2d27;
+}
+
+/* Koyu temada kartların ve iletişim formunun yüzey rengini ayarlar */
+body.koyu-tema .kart,
+body.koyu-tema #iletisim-formu {
+    background-color: #141c19;
+    border-color: #263831;
+}
+
+/* Koyu temada tablo kapsayıcısını ve tablo arka planını koyulaştırır */
+body.koyu-tema .tablo-kapsayici,
+body.koyu-tema table {
+    background-color: #141c19;
+    border-color: #263831;
+}
+
+/* Koyu temada tablo başlığını koyu yeşil, hücre yazılarını açık renk yapar */
+body.koyu-tema thead th {
+    background-color: #164b39;
+    color: #ffffff;
+}
+
+/* Koyu temada tablo veri hücrelerinin rengini ve çizgisini uyarlar */
+body.koyu-tema tbody td {
+    color: #e8efec;
+    border-bottom-color: #24332d;
+}
+
+/* Koyu temada çift satırlara hafif koyu ton verir */
+body.koyu-tema tbody tr:nth-child(even) {
+    background-color: #1a2420;
+}
+
+/* Koyu temada form giriş alanlarının arka planını ve kenarlığını ayarlar */
+body.koyu-tema .form-grubu input,
+body.koyu-tema .form-grubu textarea {
+    background-color: #0d1110;
+    color: #f4f7f5;
+    border-color: #3a5248;
+}
+
+/* Koyu temada metin içi bağlantıların rengini bebek mavisi yapar */
+body.koyu-tema .metin-baglanti {
+    color: #b8ddf8;
+}
+
+/* Koyu temada hata mesajını okunaklı açık kırmızı yapar */
+body.koyu-tema .form-durum.hata {
+    color: #ff8a96;
+}
+
+/* Koyu temada başarı mesajını okunaklı açık yeşil yapar */
+body.koyu-tema .form-durum.basari {
+    color: #9be8c2;
+}
+
+/* 600 piksel ve altındaki mobil ekranlar için duyarlı düzen kurallarını uygular */
+@media (max-width: 600px) {
+    /* Mobil ekranda üst bilgi öğelerini alt alta dizer */
+    .ust-duzen {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Mobil ekranda menü bağlantılarını alt alta sıralar */
+    #ana-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+    }
+
+    /* Mobil ekranda Hakkımda bölümünü tek sütuna düşürür */
+    .hakkimda-icerik {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* Mobil ekranda liste kartlarını tek sütuna düşürür */
+    .liste-izgara {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mobil ekranda bölüm boşluklarını daraltır */
+    .bolum {
+        padding: 36px 0;
+    }
+
+    /* Mobil ekranda tablo hücrelerinin yazı boyutunu ve boşluğunu küçültür */
+    thead th,
+    tbody td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+
+    /* Mobil ekranda alt bilgiyi alt alta dizer */
+    .alt-duzen {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

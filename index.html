@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tuanna Altın | Kişisel Tanıtım Sayfası</title>
+    <!-- Harici CSS dosyasının bağlanması -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Harici JavaScript dosyasının defer ile bağlanması -->
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Sayfa üst bilgisi: Ad soyad, ünvan, menü ve tema düğmesi -->
+    <header id="ust-bilgi">
+        <div class="kapsayici ust-duzen">
+            <div class="marka">
+                <h1>Tuanna Altın</h1>
+                <p class="alt-unvan">Yazılım Geliştirme Öğrencisi</p>
+            </div>
+
+            <!-- Sayfa içi bölümlere yönlendiren gezinme menüsü -->
+            <nav id="ana-menu" aria-label="Ana gezinme menüsü">
+                <a href="#hakkimda">Hakkımda</a>
+                <a href="#beceriler">Eğitim ve Beceriler</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+
+            <!-- Açık ve koyu tema arasında geçiş yapan düğme -->
+            <button type="button" id="tema-dugmesi" class="tema-butonu">Koyu tema</button>
+        </div>
+    </header>
+
+    <!-- Sayfanın ana içeriği -->
+    <main class="kapsayici">
+
+        <!-- Hakkımda bölümü: Kısa özgeçmiş, staj hedefi ve profil fotoğrafı -->
+        <section id="hakkimda" class="bolum">
+            <h2>Hakkımda</h2>
+            <div class="hakkimda-icerik">
+                <div class="hakkimda-metin">
+                    <p>
+                        Merhaba, ben Tuanna Altın. Kapadokya Üniversitesi Yazılım Geliştirme bölümü
+                        2. sınıf öğrencisiyim. Modern ve kullanıcı dostu web arayüzleri tasarlamak,
+                        Python ile yazılım geliştirmek ve siber güvenlik temelleri üzerine kendimi
+                        geliştirmek öncelikli odak alanlarım arasında yer alıyor.
+                    </p>
+                    <p>
+                        Akademik eğitimimi gerçek dünya deneyimiyle birleştirmek amacıyla yazılım
+                        geliştirme ve web tasarımı alanlarında staj yapmayı hedefliyorum. Temiz kod
+                        yazma disiplini, ekip çalışmasına yatkınlık ve sürekli öğrenme motivasyonuyla
+                        projelere değer katmayı amaçlıyorum.
+                    </p>
+                    <div class="dis-baglantilar">
+                        <a href="https://github.com/tuannaltinn" target="_blank" rel="noopener" class="baglanti-buton">GitHub Profilimi İncele</a>
+                        <a href="https://www.kapadokya.edu.tr" target="_blank" rel="noopener" class="baglanti-buton ikincil">Kapadokya Üniversitesi</a>
+                    </div>
+                </div>
+                <div class="profil-cerceve">
+                    <img src="assets/img/profil.jpg" alt="Tuanna Altın'ın şehir manzaralı siyah beyaz profil fotoğrafı" class="profil-foto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Eğitim ve Beceriler bölümü: Listeler ve alınan dersler tablosu -->
+        <section id="beceriler" class="bolum">
+            <h2>Eğitim ve Beceriler</h2>
+
+            <div class="liste-izgara">
+                <div class="kart">
+                    <h3>Teknik Beceriler ve İlgi Alanları</h3>
+                    <ul>
+                        <li>HTML5 ve anlamsal sayfa yapısı</li>
+                        <li>CSS3, Flexbox, Grid ve duyarlı (responsive) tasarım</li>
+                        <li>JavaScript ile DOM ve olay yönetimi</li>
+                        <li>Python ile temel ve nesne tabanlı programlama</li>
+                        <li>Git ve GitHub ile sürüm kontrolü</li>
+                        <li>Bilgi güvenliği ve siber güvenlik temelleri</li>
+                    </ul>
+                </div>
+
+                <div class="kart">
+                    <h3>Kariyer ve Öğrenme Hedeflerim</h3>
+                    <ol>
+                        <li>Web tasarımı ve ön yüz geliştirme alanında güçlü projeler üretmek</li>
+                        <li>Yazılım geliştirme alanında verimli bir staj deneyimi kazanmak</li>
+                        <li>GitHub portföyümü açık kaynak ve kişisel projelerle büyütmek</li>
+                        <li>Güvenli yazılım geliştirme pratiklerini projelerime entegre etmek</li>
+                    </ol>
+                </div>
+            </div>
+
+            <h3>Aldığım Dersler</h3>
+            <!-- Alınan dersleri, odak konularını ve durumlarını gösteren tablo -->
+            <div class="tablo-kapsayici">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ders Adı</th>
+                            <th>Odak Alanı</th>
+                            <th>Düzey / Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Tasarımı</td>
+                            <td>HTML5, CSS3, JavaScript ve duyarlı düzen</td>
+                            <td>Devam Ediyor</td>
+                        </tr>
+                        <tr>
+                            <td>Bilgi Güvenliği ve Siber Güvenlik Temelleri</td>
+                            <td>Ağ güvenliği, veri gizliliği ve temel kavramlar</td>
+                            <td>Devam Ediyor</td>
+                        </tr>
+                        <tr>
+                            <td>Nesne Tabanlı Programlama</td>
+                            <td>Sınıflar, kalıtım ve modüler yazılım mimarisi</td>
+                            <td>Devam Ediyor</td>
+                        </tr>
+                        <tr>
+                            <td>Python ile Programlama</td>
+                            <td>Algoritma geliştirme ve temel programlama</td>
+                            <td>Tamamlandı</td>
+                        </tr>
+                        <tr>
+                            <td>Veri Yapıları</td>
+                            <td>Diziler, bağlı listeler, yığınlar ve ağaçlar</td>
+                            <td>Devam Ediyor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- İletişim bölümü: JavaScript ile doğrulanan iletişim formu -->
+        <section id="iletisim" class="bolum">
+            <h2>İletişim</h2>
+            <p class="iletisim-aciklama">
+                Staj fırsatları, proje iş birlikleri veya sorularınız için aşağıdaki formu doldurabilir
+                ya da doğrudan <a href="mailto:tuannaltin@icloud.com" class="metin-baglanti">tuannaltin@icloud.com</a>
+                adresinden ulaşabilirsiniz.
+            </p>
+
+            <!-- Kullanıcıdan ad soyad, e-posta ve mesaj alan iletişim formu -->
+            <form id="iletisim-formu" novalidate>
+                <div class="form-grubu">
+                    <label for="ad-soyad">Ad Soyad</label>
+                    <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Adınız ve soyadınız" required>
+                </div>
+
+                <div class="form-grubu">
+                    <label for="eposta">E-posta</label>
+                    <input type="email" id="eposta" name="eposta" placeholder="ornek@eposta.com" required>
+                </div>
+
+                <div class="form-grubu">
+                    <label for="mesaj">Mesajınız</label>
+                    <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                </div>
+
+                <button type="submit" class="gonder-butonu">Mesajı Gönder</button>
+                <p id="form-durum" class="form-durum" aria-live="polite"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Sayfa alt bilgisi: Telif hakkı ve hızlı bağlantılar -->
+    <footer id="alt-bilgi">
+        <div class="kapsayici alt-duzen">
+            <p>&copy; 2026 Tuanna Altın. Tüm hakları saklıdır.</p>
+            <a href="https://github.com/tuannaltinn" target="_blank" rel="noopener">GitHub: tuannaltinn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
